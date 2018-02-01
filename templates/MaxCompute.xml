@@ -1,0 +1,40 @@
+<templateSet group="MaxCompute">
+  <template name="ct" value="CREATE TABLE $END$[IF NOT EXISTS] table_name&#10;(col_name col_type [comment ''], ...)&#10;[comment '']&#10;[partitioned by (part_col_name part_col_type [comment ''], ...)]&#10;[lifecycle days]" description="create table" toReformat="false" toShortenFQNames="false" />
+  <template name="cet" value="set odps.service.mode=off;&#10;CREATE EXTERNAL TABLE IF NOT EXISTS external_table_name&#10;(col_name col_type [comment ''], ...)&#10;[comment '']&#10;STORED BY '?'&#10;WITH SERDEPROPERTIES('?')&#10;LOCATION 'oss://oss-cn-hangzhou-zmf.aliyuncs.com/?'&#10;USING '?.jar';" description="create external table" toReformat="false" toShortenFQNames="false" />
+  <template name="cts" value="CREATE TABLE $END$[IF NOT EXISTS] table_name AS SELECT col_name, ... FROM existing_table_name" description="create table as select" toReformat="false" toShortenFQNames="false" />
+  <template name="ctl" value="CREATE TABLE $END$[IF NOT EXISTS] table_name LIKE existing_table_name" description="create table like" toReformat="false" toShortenFQNames="false" />
+  <template name="dt" value="DROP TABLE [IF EXISTS] table_name [PURGE]" description="drop table" toReformat="false" toShortenFQNames="false" />
+  <template name="tt" value="TRUNCATE TABLE table_name" description="truncate table" toReformat="false" toShortenFQNames="false" />
+  <template name="pt" value="PURGE TABLE table_name" description="purge table" toReformat="false" toShortenFQNames="false" />
+  <template name="atr" value="ALTER TABLE table_name RENAME TO new_table_name" description="alter table rename to" toReformat="false" toShortenFQNames="false" />
+  <template name="atsc" value="ALTER TABLE table_name SET COMMENT ''" description="alter table set comment" toReformat="false" toShortenFQNames="false" />
+  <template name="atsl" value="ALTER TABLE table_name SET LIFECYCLE days" description="alter table set lifecycle" toReformat="false" toShortenFQNames="false" />
+  <template name="atl" value="ALTER TABLE table_name [PARTITION(part_col1 = part_value1, ...)] ENABLE|DISABLE LIFECYCLE" description="alter table enable | disable lifecycle" toReformat="false" toShortenFQNames="false" />
+  <template name="att" value="ALTER TABLE table_name TOUCH [PARTITION(part_col1 = part_value1, ...)]" description="alter table touch" toReformat="false" toShortenFQNames="false" />
+  <template name="ata" value="ALTER TABLE table_name [PARTITION(part_col1 = part_value1, ...)] ARCHIVE" description="truncate partition table, drop partition" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="alter table archive" value="true" />
+    </context>
+  </template>
+  <template name="atac" value="ALTER TABLE table_name ADD COLUMNS (col_name1 type1, ...)" description="alter table add columns" toReformat="false" toShortenFQNames="false" />
+  <template name="atccr" value="ALTER TABLE table_name CHANGE COLUMN old_col_name RENAME TO new_col_name" description="alter table column rename" toReformat="false" toShortenFQNames="false" />
+  <template name="atccc" value="ALTER TABLE table_name CHANGE COLUMN col_name COMMENT ''" description="alter table column comment" toReformat="false" toShortenFQNames="false" />
+  <template name="alct" value="ALTER TABLE table_name CHANGEOWNER TO 'ALIYUN$xxx@aliyun.com';" description="alter table change owner" toReformat="false" toShortenFQNames="false" />
+  <template name="atm" value="ALTER TABLE table_name [PARTITION(part_col1 = part_value1, ...)] MERGE SMALLFILES" description="alter table merge" toReformat="false" toShortenFQNames="false" />
+  <template name="scft" value="SHOW CHANGELOGS FOR TABLE table_name [PARTITION(part_col1 = part_value1, ...)]" description="show table change logs" toReformat="false" toShortenFQNames="false" />
+  <template name="utt" value="UNDO TABLE table_name [PARTITION(part_col1 = part_value1, ...)] TO changelog_id" description="undo table to change log" toReformat="false" toShortenFQNames="false" />
+  <template name="det" value="DESC table_name [PARTITION(part_col1 = part_value1, ...)]" description="desc table" toReformat="false" toShortenFQNames="false" />
+  <template name="st" value="SHOW TABLES" description="show all tables" toReformat="false" toShortenFQNames="false" />
+  <template name="sp" value="SHOW PARTITIONS table_name" description="show partitions" toReformat="false" toShortenFQNames="false" />
+  <template name="atap" value="ALTER TABLE table_name ADD [IF NOT EXISTS] PARTITION (part_col1 = part_value1, ...)" description="alter table add partition" toReformat="false" toShortenFQNames="false" />
+  <template name="atdp" value="ALTER TABLE table_name DROP [IF EXISTS] PARTITION (part_col1 = part_value1, ...) [PURGE]" description="alter table drop partition" toReformat="false" toShortenFQNames="false" />
+  <template name="atpr" value="ALTER TABLE table_name PARTITION (part_col1 = part_value1, ...) RENAME TO PARTITION (part_col1 = part_col_new_value1, ...)" description="alter table rename partition" toReformat="false" toShortenFQNames="false" />
+  <template name="cv" value="CREATE [OR REPLACE] VIEW [IF NOT EXISTS] view_name&#10;[(col_name [comment ''], ...)]&#10;[comment '']&#10;[AS SELECT col, ... FROM existing_table_name]" description="create view" toReformat="false" toShortenFQNames="false" />
+  <template name="dv" value="DROP VIEW [IF EXISTS] view_name" description="drop view" toReformat="false" toShortenFQNames="false" />
+  <template name="avrt" value="ALTER VIEW view_name RENAME TO new_view_name" description="alter view rename" toReformat="false" toShortenFQNames="false" />
+  <template name="it" value="INSERT OVERWRITE|INTO TABLE table_name [PARTITION (part_col1 = part_value1, ...)]&#10;SELECT col, ... FROM existing_table_name" description="insert table" toReformat="false" toShortenFQNames="false" />
+  <template name="mit" value="FROM existing_table_name&#10;INSERT OVERWRITE|INTO TABLE table_name1 [PARTITION (part_col1 = part_value1, ...)]&#10;SELECT col1, ...&#10;[INSERT OVERWRITE|INTO TABLE table_name2 [PARTITION (part_col2 = part_col_value2, ...)]&#10;SELECT col2, ...]" description="multi insert table" toReformat="false" toShortenFQNames="false" />
+  <template name="itdp" value="INSERT OVERWRITE TABLE table_name PARTITION (partcol1, ...) SELECT col, ... FROM existing_table_name" description="insert table dynamic partition" toReformat="false" toShortenFQNames="false" />
+  <template name="sf" value="SELECT [ALL|DISTINCT] select_expr, ... &#10;FROM table_name&#10;[WHERE where_condition]&#10;[GROUP BY col_list]&#10;[ORDER BY order_condition]&#10;[DISTRIBUTE BY distribute_condition [SORT BY sort_condition]]&#10;[LIMIT number]" description="select from" toReformat="false" toShortenFQNames="false" />
+  <template name="lv" value="LATERAL VIEW udtf(expression) tableAlias AS columnAlias (',' columnAlias)*" description="lateral view" toReformat="false" toShortenFQNames="false" />
+</templateSet>

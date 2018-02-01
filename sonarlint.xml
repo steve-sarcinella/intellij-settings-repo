@@ -1,0 +1,14 @@
+<application>
+  <component name="SonarLintGlobalSettings">
+    <option name="sonarQubeServers">
+      <list>
+        <SonarQubeServer>
+          <option name="hostUrl" value="https://sonar.levvel.io" />
+          <token>df92df9ddfcedfccdfcbdfcedf9bdfccdf99df9fdf93df92dfc8df99dfcedf9adf9cdfcedf9ddf9ddfcedf9ddf9adf92df92df92dfc9df99dfcfdfcedfcbdf9adfc9dfcfdf98df98df98df93dfcfdfc8</token>
+          <option name="name" value="levvel sonar" />
+          <organizationKey>default-organization</organizationKey>
+        </SonarQubeServer>
+      </list>
+    </option>
+  </component>
+</application>
