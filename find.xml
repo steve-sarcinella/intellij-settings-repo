@@ -1,9 +1,9 @@
 <application>
   <component name="FindSettings">
     <option name="caseSensitive" value="true" />
-    <option name="customScope" value="selection" />
-    <option name="defaultScopeName" value="selection" />
+    <option name="customScope" value="File '...\core-logic\src\test\java\com\mtb\p2p\payment\sendpayment\SendPaymentWorkflowImplIT.java [core-logic]'" />
+    <option name="defaultScopeName" value="File '...\core-logic\src\test\java\com\mtb\p2p\payment\sendpayment\SendPaymentWorkflowImplIT.java [core-logic]'" />
     <option name="CASE_SENSITIVE_SEARCH" value="true" />
-    <option name="SEARCH_SCOPE" value="selection" />
+    <option name="SEARCH_SCOPE" value="File '...\core-logic\src\test\java\com\mtb\p2p\payment\sendpayment\SendPaymentWorkflowImplIT.java [core-logic]'" />
   </component>
 </application>
