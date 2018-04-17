@@ -1,8 +1,8 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="All Places" />
-    <option name="defaultScopeName" value="All Places" />
-    <option name="SEARCH_SCOPE" value="All Places" />
+    <option name="customScope" value="File '...\core-logic\src\test\java\com\mtb\p2p\payment\sendpayment\CreatePaymentRecipientTest.java [core-logic]'" />
+    <option name="defaultScopeName" value="File '...\core-logic\src\test\java\com\mtb\p2p\payment\sendpayment\CreatePaymentRecipientTest.java [core-logic]'" />
+    <option name="SEARCH_SCOPE" value="File '...\core-logic\src\test\java\com\mtb\p2p\payment\sendpayment\CreatePaymentRecipientTest.java [core-logic]'" />
     <mask>*.properties</mask>
     <mask>*.html</mask>
     <mask>*.jsp</mask>
