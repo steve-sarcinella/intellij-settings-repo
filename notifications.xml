@@ -1,3 +1,8 @@
 <application>
-  <component name="NotificationConfiguration" showBalloons="false" />
+  <component name="NotificationConfiguration">
+    <notification groupId="Debugger messages" displayType="TOOL_WINDOW" />
+    <notification groupId="Gradle Import" displayType="STICKY_BALLOON" />
+    <notification groupId="Indexing" />
+    <notification groupId="Injector" displayType="STICKY_BALLOON" />
+  </component>
 </application>
