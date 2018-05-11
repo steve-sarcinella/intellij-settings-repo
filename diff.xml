@@ -18,6 +18,14 @@
     </option>
   </component>
   <component name="TextDiffSettings">
+    <option name="PLACES_MAP">
+      <entry key="Default">
+        <PlaceSettings>
+          <option name="SHOW_INDENT_LINES" value="true" />
+          <option name="SHOW_WHITESPACES" value="true" />
+        </PlaceSettings>
+      </entry>
+    </option>
     <option name="SHARED_SETTINGS">
       <SharedSettings>
         <option name="CONTEXT_RANGE" value="8" />
