@@ -1,0 +1,7 @@
+<application>
+  <component name="AdvancedExpressionFoldingSettings">
+    <option name="castExpressionsCollapse" value="false" />
+    <option name="compactControlFlowSyntaxCollapse" value="false" />
+    <option name="rangeExpressionsCollapse" value="false" />
+  </component>
+</application>
